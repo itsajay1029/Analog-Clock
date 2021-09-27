@@ -1,0 +1,195 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap');
+
+
+/* 
+A8DADC light   hsl(182, 43%, 76%)
+457B9D medium  hsl(203, 39%, 44%)
+1D3557 hard   hsl(215, 50%, 23%)
+
+
+*/
+
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+
+body{
+    font-family: 'Poppins', sans-serif;
+    background-color: hsl(192, 24%, 96%);
+    overflow: hidden;
+}
+
+.container{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.clock__circle{
+    position: relative;
+    width: 200px;
+    height: 200px;
+    background-color:  hsl(187, 21%, 93%) ;
+    /* box shadow */
+   
+    box-shadow: 0 4px 5px #333 , -2px 4px 5px #333, 0px 2px 7px inset #333;
+    border: 3px ridge hsl(182, 43%, 76%) ;
+
+    border-radius: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* box-shadow: 3px 0 5px #000  ; */
+}
+.clock__twelve, .clock__six, .clock__nine, .clock__three{
+    position: absolute;
+    width: 1rem;
+    height: 1px;
+    background-color: hsl(203, 39%, 44%);
+}
+
+.clock__twelve, .clock__six{
+    transform: translateX(-50%) rotate(90deg);
+}
+
+.clock__three, .clock__nine{
+    transform: translateX(-50%);
+}
+.clock__twelve{
+    left: 50%;
+    top: 1rem;
+}
+
+.clock__six{
+    left: 50%;
+    bottom: 1rem;
+}
+
+.clock__three{
+    top: 50%;
+    right: 0;
+}
+
+.clock__nine{
+    top: 50%;
+    left: 1rem;
+}
+
+.clock__rounder{
+    width: .75rem;
+    height: .75rem;
+    background-color: hsl(215, 50%, 30%) ;
+    border-radius: 50%;
+    border: 2px solid hsl(215, 50%, 30%) ;
+    box-shadow: 0px 3px 5px black;
+    z-index: 10;
+}
+
+.clock__hour,.clock__minute,.clock__second{
+    position:absolute;
+}
+
+.clock__hour{
+    width: 105px;height: 105px;
+}
+.clock__hour{
+    position: absolute;
+    width: 0.25rem;
+    height: 3rem;
+    background-color:black ;
+    border-radius: 20%;
+    z-index: 5;
+    bottom: 50%;
+    transform-origin: bottom;
+   
+}
+
+.clock__minute{
+    width: 105px;height: 105px;
+}
+.clock__minute{
+    position: absolute;
+    width: 0.18rem;
+    height: 3.5rem;
+    background-color:black ;
+    border-radius: 25%;
+    z-index: 5;
+    bottom: 50%;
+    transform-origin: bottom;
+   
+}
+
+.clock__second{
+    width: 105px;height: 105px;
+}
+.clock__second{
+    position: absolute;
+    width: 0.12rem;
+    height: 4rem;
+    background-color:rgb(8, 5, 5) ;
+    border-radius: 30%;
+    z-index: 5;
+    bottom: 50%;
+    transform-origin: bottom;
+}
+
+
+.clock_text{
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+    
+}
+
+.clock_text-hour , .clock_text-min{
+    font-family: 'Poppins', sans-serif; 
+    font-weight: 800;
+    font-size: 40px;
+}
+.clock_text-am{
+    font-family: 'Poppins', sans-serif ;
+    font-weight: 500;
+    font-size: medium;
+    margin-left: 5px;
+}
+
+.clock_date{
+    text-align: center;
+}
+
+.clock_theme{
+    position: absolute;
+    top: -1rem;
+    right: -1rem;
+    display: flex;
+    padding: .25rem;
+    border-radius:50% ;
+    box-shadow: inset -1px -1px 1px hsl(215, 50%, 23%), inset 1px 1px 1px hsl(215, 50%, 23%) ;
+    color:  hsl(215, 50%, 23%);
+    cursor: pointer;
+}
+
+.dark-theme{
+    background-color:hsl(215, 63%, 11%) ;
+}
+
+.d1{
+    color: white;
+}
+
+.d2{
+    background-color: white;
+}
+.d3{
+    background-color:hsl(203, 88%, 10%) ;
+    box-shadow: 0 4px 5px #ccc , -2px 4px 5px #333, 0px 2px 7px inset #ccc;
+}
+.d4{
+    background-color: rgb(218, 218, 8);
+}
